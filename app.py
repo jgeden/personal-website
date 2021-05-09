@@ -3,8 +3,9 @@ import os
 app = Flask(__name__)
 
 @app.route('/')
+@app.route('/aboutme')
 def index_page():
-    return render_template('index.html')
+    return render_template('aboutMe.html')
 
 @app.route('/projects')
 def projects_page():
