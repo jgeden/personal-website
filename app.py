@@ -15,7 +15,3 @@ def resume_page():
     directory = os.path.abspath(os.getcwd())
     filepath = directory + '/static/files/'
     return send_from_directory(filepath, 'Joshua_Geden_Resume.pdf')
-
-@app.route('/contact')
-def contact_page():
-    return render_template('contact.html')

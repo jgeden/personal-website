@@ -9,7 +9,6 @@
             <li><a href="/">About Me</a></li>
             <li><a href="/projects">Projects</a></li>
             <li><a href="/resume">Resume</a></li>
-            <li><a href="/contact">Contact</a></li>
         </ul>
     </div>
 </div>
@@ -21,7 +20,8 @@
     }
     .navbar ul {
         list-style: none;
-        margin-left: 118px;
+        margin-left: 122px;
+        margin-top: 10px;
     }
     .navbar li {
         display: inline-block;
@@ -70,9 +70,12 @@
     }
 
     @media only screen and (max-width: 425px) {
-        .navbar .header {
+        .navbar .headers {
             font-size: 14px;
             margin-left: 150px;
+        }
+        .navbar .headers h2 {
+            font-size: 14px;
         }
         .navbar .headshot {
             width: 121px;
@@ -91,7 +94,7 @@
     }
 
     @media only screen and (max-width: 350px) {
-        .navbar .header {
+        .navbar .headers {
             font-size: 12px;
             margin-left: 135px;
         }
