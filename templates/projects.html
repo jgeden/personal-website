@@ -1,0 +1,33 @@
+<head>
+    <title>Projects | Josh Geden</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+{% include 'navbar.html' %}
+
+<div class="projects">
+    <div class="content">
+        <ul>
+            <li>JupyterLab Announcements Refresh Extension</li>
+            <li>JupyterLab Additional Resources Menu Extension</li>
+            <li>This website!</li>
+            <li>Raining Cats and Dogs</li>
+            <li>CS290 Web App Development Portfolio</li>
+            <li>RISC Processor</li>
+            <li>Huffman File Compressor</li>
+            <li>SimplyFrank Simulated Compiler and Assembler</li>
+            <li>FIRST Robotics OnBot Java Control System</li>
+        </ul>
+    </div>
+</div>
+
+{% include 'footer.html' %}
+
+<style scoped>
+.projects {
+    height: 66.5vh;
+}
+li {
+    color: white;
+}
+</style>
