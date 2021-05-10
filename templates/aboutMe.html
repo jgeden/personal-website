@@ -3,34 +3,45 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
+<script>
+    window.onresize = function(){ location.reload(); }
+</script>
+
 {% include 'navbar.html' %}
 
 <div class="aboutme">
     <div class="container">
         <div class="content">
             <h1>😀 Hey, I'm Josh.</h1>
-            <p>I am a student at Duke University where I am studying Computer Science, Linguistics, & German, and will be graduating May 2023. Go Blue Devils 🔵😈!</p>
+            <p>I am a student at Duke University, where I am studying Computer Science, Linguistics, & German, and will be graduating in May 2023. Go Blue Devils 🔵😈! I was born and raised in Greenville, SC 🌙🌴 and I went to high school at the S.C. Governor's School for Science and Math, where I graduated with a concentration in Math and Computer Science.</p>
             <p>At Duke, I am a member of the International Collegiate Programming Competition club (it's like Leetcode but on steroids). I am also a student researcher with Yang Lab 👨‍🔬. We focus on applications of machine learning and natural language processing to combat vaccine misinformation 🖥🧠.</p>
-            <p>I have also been a teaching assistant for 3 semesters at Duke, twice for Data Stuctures & Algorithms and once for Discrete Math for Computer Science 👨‍🏫🍎. Some of my favorite projects we have done have been Huffman Encoding, Text Predication with Hidden Markov models, and RSA encryption.</p>
-            <p>I am currently a software engineer intern at Berkeley National Lab 🌇🇺🇸🧪. I am developing frontend and backend software in Javascript and Python to extend JupyterLab ☕️🐍🪐. This helps researchers at the lab by making the supercomputers at Berkeley more accessible and user friendly through Jupyter.</p>
+            <p>I have also been a teaching assistant for 3 semesters at Duke 👨‍🏫🍎, twice for Data Stuctures & Algorithms and once for Discrete Math for Computer Science. Some of my favorite projects we have done have been Percolation modeling with BFS & DFS, Text Predication with Hidden Markov models, and RSA encryption with functional programming.</p>
+            <p>I am currently a software engineer intern at Berkeley National Lab 🌇🇺🇸🧪, where I am developing software in Javascript and Python to extend JupyterLab ☕️🐍🪐. My work focuses on helping the researchers at the lab by making the supercomputers at Berkeley more accessible and user friendly. Check out my projects page to see some of these extensions!</p>
+            <p>In my free time, I love to play strategy games like Civ VI and Total War (or any other game where you spend a long time staring at a map) 🗺🎮. I also love to play pickup basketball and swim 🏀🏊‍♂️, and I am always down to get some Mexican food with friends 🌮.</p>
         </div>
     </div>
 </div>
 
-{% include 'footer.html' %}
+{% with fixed=True %}
+    {% include 'footer.html' %}
+{% endwith %}
 
 <style scoped>
     .aboutme {
+        /* margin: auto; */
+        /* height: 75.5vh; */
+        /* min-height: 90%; */
+        /* margin-bottom: 0.5vh; */
         width: 80%;
         max-width: 900px;
-        margin: auto;
+        margin: 40px auto 40px auto;
     }
     .aboutme .container {
         background-color: rgb(189, 189, 189);
         border-radius: 25px;
     }
     .aboutme .container .content {
-        margin: 44px 20px 20px 20px;
+        margin: 20px;
         padding: 5px;
     }
     .aboutme .container h1 {
@@ -39,13 +50,13 @@
     }
 
     .aboutme .container p {
-        margin: 0px 0px 10px 0px;
-        font-size: 18px;
+        margin: 0px 0px 12px 0px;
+        font-size: 16px;
     }
 
     @media only screen and (min-width: 1200px) {
         .aboutme .container p {
-            font-size: 20px;
+            font-size: 16px;
         }
     }
 </style>
