@@ -3,26 +3,28 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
-{% include 'navbar.html' %}
+<body>
+    <div class="pagecontainer">
+        {% include 'navbar.html' %}
 
-<div class="resume">
-    <div class="container">
-        <div class="content">
-            <a href="/resumefile" target="_blank" rel="noopener_noreferrer">Open PDF in new Tab</a>
-            <br>
-            <embed class="resumefile" src="/resumefile" type="application/pdf"/>
+        <div class="resume">
+            <div class="container">
+                <div class="content">
+                    <a href="/resumefile" target="_blank" rel="noopener_noreferrer">Open PDF in new Tab</a>
+                    <br>
+                    <embed class="resumefile" src="/resumefile" type="application/pdf"/>
+                </div>
+            </div>
         </div>
+
+        {% include 'footer.html' %}
     </div>
-</div>
-
-
-{% include 'footer.html' %}
-
+</body>
 
 <style scoped>
     .resume {
         margin: auto;
-        margin-bottom: 20px;
+        padding-bottom: 40px;
     }
     .resume .container {
         margin: 20px;

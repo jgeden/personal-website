@@ -1,13 +1,15 @@
 <div class="footer {{ 'fixed' if fixed }}">
-    <a href="https://www.linkedin.com/in/joshua-geden/" target="_blank" rel="noopener_noreferrer">
-        <img class="logo" id="linkedin_logo" src="{{ url_for('static', filename='images/linkedin_logo.png') }}" alt="linkedin logo">
-    </a>
+    <div class="content">
+        <a href="https://www.linkedin.com/in/joshua-geden/" target="_blank" rel="noopener_noreferrer">
+            <img class="logo" id="linkedin_logo" src="{{ url_for('static', filename='images/linkedin_logo.png') }}" alt="linkedin logo">
+        </a>
 
-    <a href="https://www.github.com/Josh0823" target="_blank" rel="noopener_noreferrer">
-        <img class="logo" id="github_logo" src="{{ url_for('static', filename='images/github_logo.png') }}" alt="github logo">
-    </a>
+        <a href="https://www.github.com/Josh0823" target="_blank" rel="noopener_noreferrer">
+            <img class="logo" id="github_logo" src="{{ url_for('static', filename='images/github_logo.png') }}" alt="github logo">
+        </a>
 
-    <p class="email">Contact me at: <a href="mailto:joshua.geden@duke.edu">joshua.geden@duke.edu</a></p>
+        <p class="email">Contact me at: <a href="mailto:joshua.geden@duke.edu">joshua.geden@duke.edu</a></p>
+    </div>
 </div>
 
 <style scoped>
@@ -15,30 +17,42 @@
         width: 100vw;
         background-color: rgb(189, 189, 189);
         bottom: 0;
-        left: 0;
-        height: 38px;
-        padding-bottom: 5px;
+        height: 40px;
+        position: absolute;
+    }
+    .footer .content {
+        text-align: center;
+        margin-top: 10px;
     }
     .email {
-        position: relative;
-        text-align: center;
-        bottom: 32px;
+        /* display: block; */
+        /* margin: auto; */
+        margin-top: 12px;
+        /* margin-bottom: 8px; */
+        /* position: relative; */
     }
     .logo {
-        width: 2.8vh;
-        height: 2.8vh;
-        top: 1.0vh;
-        position: relative;
+        width: 25px;
+        height: 25px;
+        top: 10px;
+        /* margin: 8px; */
+        position: absolute;
         z-index: 1;
     }
     #linkedin_logo {
-        left: 1.0vw;
+        left: 10px;
     }
     #github_logo {
-        left: 1.3vw;
+        left: 45px;
     }
 
-    @media only screen and (min-width: 800px) {
+    @media only screen and (min-width: 1300px) {
+        .fixed {
+            position: fixed;
+        }
+    }
+
+    @media only screen and (min-height: 1000px) {
         .fixed {
             position: fixed;
         }
