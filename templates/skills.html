@@ -3,25 +3,30 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
-{% include 'navbar.html' %}
+<body>
+    <div class="pagecontainer">
+        {% include 'navbar.html' %}
 
-<div class="skills">
-    <div class="container">
-        <div class="content">
-            <p>Coming soon...</p>
+        <div class="skills">
+            <div class="container">
+                <div class="content">
+                    <ul class="skill-categories">
+                        <li>Technical Skills</li>
+                        <li>Soft Skills</li>
+                        <li>Interpersonal Skills</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-{% with fixed=True %}
-    {% include 'footer.html' %}
-{% endwith %}
+        {% include 'footer.html' %}
+    </div>
+</body>
 
 <style scoped>
     .skills {
         margin: auto;
-        height: 75.5vh;
-        margin-bottom: 20px;
+        padding-bottom: 40px;
     }
     .skills .container {
         margin: 20px;

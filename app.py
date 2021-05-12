@@ -11,6 +11,10 @@ def index_page():
 def projects_page():
     return render_template('projects.html')
 
+@app.route('/coursework')
+def coursework_page():
+    return render_template('coursework.html')
+
 @app.route('/skills')
 def skils_page():
     return render_template('skills.html')
