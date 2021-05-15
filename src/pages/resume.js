@@ -11,6 +11,7 @@ import resume from '../files/Joshua_Geden_Resume.pdf'
 const ResumePage = () => {
   return (
     <div className="pagecontainer">
+      <title>Resume | Josh Geden</title>
       <Navbar />
       <div className="resume">
         <div className="container">
