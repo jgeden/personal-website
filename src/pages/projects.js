@@ -45,8 +45,8 @@ const ProjectsPage = () => {
                 </a>
               </h3>
               <ul>
-                <li>All the cool kids have their own personal website, and I wanted one too. I built this website with simple HTML and CSS and deployed it with Flask and Heroku. While not the most technologically complex, I did spend a lot of time googling how to properly center divs, so I hope you enjoy my hard work.</li>
-                <li><b>Technologies:</b> HTML, CSS, Flask, Heroku</li>
+                <li>All the cool kids have their own personal website, and I wanted one too. I originally built this website with simple HTML and CSS, but I transitioned to use React with Gatsby.js to improve rendering performance and improve organization.</li>
+                <li><b>Technologies:</b> React, Gatsby.js, HTML, CSS</li>
               </ul>
             </li>
             <li className="project">
