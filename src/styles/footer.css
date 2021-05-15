@@ -1,0 +1,55 @@
+.footer {
+  width: 100vw;
+  background-color: rgb(189, 189, 189);
+  bottom: 0;
+  height: 40px;
+  position: absolute;
+}
+.footer .content {
+  text-align: center;
+  margin-top: 10px;
+}
+.email {
+  margin-top: 12px;
+}
+.logo {
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  /* margin: 8px; */
+  position: absolute;
+  z-index: 1;
+}
+#linkedin_logo {
+  left: 10px;
+}
+#github_logo {
+  left: 45px;
+}
+
+@media only screen and (min-width: 1300px) {
+  .fixed {
+      position: fixed;
+  }
+}
+
+@media only screen and (min-height: 1000px) {
+  .fixed {
+      position: fixed;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .footer {
+      font-size: 14px;
+  }
+  .logo {
+      top: 1.1vh
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .email {
+      font-size: 11px;
+  }
+}

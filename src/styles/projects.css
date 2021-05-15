@@ -1,0 +1,30 @@
+.projects {
+  padding-bottom: 40px;
+  margin: 40px auto 0px auto;
+}
+.projects .content {
+  color: black;
+  margin: 20px;
+}
+.projects .content h3 {
+  margin: 10px;
+}
+.projects .content ul {
+  list-style: none;
+  padding: 0px;
+  margin: 10px;
+}
+.projects .content li {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.projects .content .project {
+  background-color: rgb(189, 189, 189);
+  border-radius: 25px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.img_link {
+  width: 16px;
+  margin-left: 8px;
+}

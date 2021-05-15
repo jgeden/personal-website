@@ -1,0 +1,98 @@
+.no-top-margin {
+    margin-top: 0px
+}
+.navbar ul {
+    list-style: none;
+    margin-left: 122px;
+    margin-top: 10px;
+}
+.navbar li {
+    display: inline-block;
+}
+.navbar li a {
+    display: block;
+    text-align: center;
+    margin-left: 8px;
+    padding: 1px;
+    color: black;
+    text-decoration: none;
+}
+.navbar li a:hover {
+    background-color: rgb(160, 160, 160);
+}
+.vertical-center {
+    display: flex;
+    align-items: center;
+}
+.navbar {
+    background-color: rgb(189, 189, 189);
+    width: 100%;
+    min-height: 146px;
+    padding: 10px;
+    position: relative;
+}
+.navbar .center {
+    width: 50%;
+}
+.navbar .headers {
+    margin-left: 170px;
+}
+.navbar .headers h2 {
+    margin-bottom: 0;
+}
+.navbar .name {
+    margin-bottom: 10px;
+}
+.navbar .headshot {
+    width: 135px;
+    position: absolute;
+    border-radius: 25px;
+    border: 1px solid black;
+    top: 50%;
+    left: 80px;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 425px) {
+    .navbar .headers {
+        font-size: 14px;
+        margin-left: 150px;
+    }
+    .navbar .headers h2 {
+        font-size: 14px;
+    }
+    .navbar .headshot {
+        width: 121px;
+        left: 75px;
+    }
+    .navbar .container {
+        min-height: 0px;
+    }
+    .navbar ul {
+        margin-left: 102px;
+    }
+    .navbar li a {
+        margin-left: 5px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .navbar .headers {
+        font-size: 12px;
+        margin-left: 135px;
+    }
+    .navbar .headshot {
+        width: 111px;
+    }
+    .navbar .container {
+        min-height: 0px;
+    }
+    .navbar ul {
+        margin-left: 87px;
+    }
+    .navbar li a {
+        margin-left: 2px;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,39 @@
+.aboutme {
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto 0px auto;
+    padding-bottom: 40px;
+}
+.aboutme .container {
+    background-color: rgb(189, 189, 189);
+    border-radius: 25px;
+}
+.aboutme .container .content {
+    margin: 20px;
+    margin-bottom: 35px;
+    padding: 5px;
+}
+.aboutme .container .headshot{
+    height: 130px;
+    border-radius: 25px;
+    border: 2px solid black;
+    float: right; 
+    margin: 20px 20px 5px 10px;
+}
+.aboutme .container h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.aboutme .container p {
+    margin: 0px 0px 16px 0px;
+    font-size: 16px;
+}
+.aboutme .container a {
+    color: rgb(77, 139, 136);
+}
+
+@media only screen and (min-width: 1200px) and (min-height: 900px) {
+    .aboutme .container p {
+        font-size: 18px;
+    }
+}
