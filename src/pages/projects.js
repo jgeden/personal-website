@@ -45,7 +45,7 @@ const ProjectsPage = () => {
                 </a>
               </h3>
               <ul>
-                <li>All the cool kids have their own personal website, and I wanted one too. I originally built this website with simple HTML and CSS, but I transitioned to use React with Gatsby.js to improve rendering performance and improve organization.</li>
+                <li>All the cool kids have their own personal website, and I wanted one too. I originally built this website with simple HTML & CSS and deployed with Flask and Heroku, but I transitioned to use React with Gatsby.js to improve rendering speed and improve organization.</li>
                 <li><b>Technologies:</b> React, Gatsby.js, HTML, CSS</li>
               </ul>
             </li>

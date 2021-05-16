@@ -7,7 +7,6 @@ import '../styles/global.css'
 
 import headshot from '../images/headshot.jpg'
 
-// add if-fixed for footer
 const IndexPage = () => {
   return (
     <div className="pagecontainer">
