@@ -16,6 +16,29 @@ const ProjectsPage = () => {
       <div className="projects">
         <div className="content">
           <ul>
+            {/* <li className="project">
+              <h3>NERSC Custom Entrypoint Service
+                <a href="https://github.com/Josh0823" target="_blank" rel="noreferrer">
+                  <img className="img_link" src={github} alt="github logo" />
+                </a>
+              </h3>
+              <ul>
+                <li>Entrypoint Service</li>
+                <br />
+                <li><b>Technologies:</b> Python, Tornado, Docker, Conda, JupyterHub</li>
+              </ul>
+            </li> */}
+            <li className="project">
+              <h3>NERSC Dask Launcher Widget
+                <a href="https://github.com/Josh0823/nersc-dask-launcher" target="_blank" rel="noreferrer">
+                  <img className="img_link" src={github} alt="github logo" />
+                </a>
+              </h3>
+              <ul>
+                <li>Not every scientist at Berkeley Lab is a command line wizard, so I developed a frontend Jupyter widget for launching Dask distributed computing clusters on NERSC's Cori supercomputer without the need for using the terminal. Users can instead specify their launch arguments in a simple form widget that then automatically handles the resource allocation on Cori and the configuration of the Dask client.</li>
+                <li><b>Technologies:</b> Python, Dask, Bash, JupyterLab</li>
+              </ul>
+            </li>
             <li className="project">
               <h3>JupyterLab Announcements Refresh Extension
                 <a href="https://github.com/Josh0823/nersc-refresh-announcements" target="_blank" rel="noreferrer">
@@ -34,7 +57,7 @@ const ProjectsPage = () => {
                 </a>
               </h3>
               <ul>
-                <li>Like most users, the scientists at Berkeley National Lab very rarely consult the documentation before they run into issues. So the lab service consultants often have to remind the scientists to check the lab's documentation on JupyterLab just in case their problem has already been solved. To help with this issue, I built a frontend extension for JupyterLab that adds an Additional Resources menu to the default Help Menu. This menu has links to documentation that can be set system-wide by an admin. Maybe by including links to the documentation inside of JupyterLab itself, the users will be more likely to read it... maybe.</li>
+                <li>Like most users, the scientists at Berkeley Lab very rarely consult the documentation before they run into issues. So the lab service consultants often have to remind the scientists to check the lab's documentation on JupyterLab just in case their problem has already been solved. To help with this issue, I built a frontend extension for JupyterLab that adds an Additional Resources menu to the default Help Menu. This menu has links to documentation that can be set system-wide by an admin. Maybe by including links to the documentation inside of JupyterLab itself, the users will be more likely to read it... maybe.</li>
                 <li><b>Technologies:</b> Typescript, Python, Selenium, CI/CD with GitHub Actions, JupyterLab</li>
               </ul>
             </li>
