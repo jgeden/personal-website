@@ -8,68 +8,75 @@ import '../styles/global.css'
 
 const CourseworkPage = () => {
   return (
-    <div class="pagecontainer">
+    <div className="pagecontainer">
       <title>Coursework | Josh Geden</title>
       <Navbar />
 
-      <div class="coursework">
-        <div class="container">
-          <div class="content">
-            <ul class="schools">
-              <li class="school">
+      <div className="coursework">
+        <div className="container">
+          <div className="content">
+            <ul className="schools">
+              <li className="school">
                 <h2>Duke University</h2>
-                <p class="gpa">Current GPA: 3.98/4.0</p>
+                <p className="gpa">Current GPA: 3.98/4.0</p>
                 <ul>
-                  <li class="semester">
+                  <li className="semester">
+                    <h3>Summer 2021</h3>
+                    <ul>
+                      <li>MATH 216: Linear Algebra and Differential Equations</li>
+                      <li>MATH 230: Probability</li>
+                    </ul>
+                  </li>
+                  <li className="semester">
                     <h3>Spring 2021</h3>
                     <ul>
                       <li>COMPSCI 290: Web Application Development</li>
-                      <li>STA 199L: Introduction to Data Visualization</li>
+                      <li>GERMAN 204: Intermediate German II</li>
                       <li>LINGUIST 202: Languages of the World</li>
                       <li>LINGUIST 471S: Language and Politics</li>
-                      <li>GERMAN 204: Intermediate German II</li>
+                      <li>STA 199L: Introduction to Data Visualization</li>
                     </ul>
                   </li>
-                  <li class="semester">
+                  <li className="semester">
                     <h3>Fall 2020</h3>
                     <ul>
                       <li>COMPSCI 230: Discrete Math for Computer Science</li>
-                      <li>LINGUIST 201: Introduction to Linguistics</li>
                       <li>GERMAN 203: Intermediate German I</li>
+                      <li>LINGUIST 201: Introduction to Linguistics</li>
                       <li>RUSSIAN 101: Elementary Russian I</li>
                     </ul>
                   </li>
-                  <li class="semester">
+                  <li className="semester">
                     <h3>Summer 2020</h3>
                     <ul>
                       <li>GERMAN 102: First-Year German II</li>
                     </ul>
                   </li>
-                  <li class="semester">
+                  <li className="semester">
                     <h3>Spring 2020</h3>
                     <ul>
                       <li>COMPSCI 250D: Computer Architecture</li>
+                      <li>GERMAN 101: First-Year German I</li>
                       <li>HISTORY 171S: History Gateway Seminar</li>
                       <li>WRITING 101: Academic Writing</li>
-                      <li>GERMAN 101: First-Year German I</li>
                     </ul>
                   </li>
-                  <li class="semester">
+                  <li className="semester">
                     <h3>Fall 2019</h3>
                     <ul>
-                      <li>COMPSCI 201: Data Structures and Algorithms</li>
-                      <li>MATH 212: Multivariable Calculus</li>
                       <li>CHEM 101DL: Core Concepts in Chemistry</li>
+                      <li>COMPSCI 201: Data Structures and Algorithms</li>
                       <li>ENGLISH 90S: Special Topics in Literature</li>
+                      <li>MATH 212: Multivariable Calculus</li>
                     </ul>
                   </li>
                 </ul>
               </li>
-              <li class="school">
+              <li className="school">
                 <h2>Coker University (Dual Enrollment)</h2>
-                <p class="gpa">Final GPA: 4.0/4.0</p>
+                <p className="gpa">Final GPA: 4.0/4.0</p>
                 <ul>
-                  <li class="semester">
+                  <li className="semester">
                     <h3>Fall 2018</h3>
                     <ul>
                       <li>CSC 110: Python for Scientists</li>
@@ -78,11 +85,11 @@ const CourseworkPage = () => {
                   </li>
                 </ul>
               </li>
-              <li class="school">
+              <li className="school">
                 <h2>South Carolina Governor's School for Science and Math</h2>
-                <p class="gpa">Graduating GPA: Unweighted 4.0/4.0 , Weighted 5.204</p>
+                <p className="gpa">Graduating GPA: Unweighted 4.0/4.0 , Weighted 5.204</p>
                 <ul>
-                  <li class="semester">
+                  <li className="semester">
                     <h3>Relevant High School Coursework</h3>
                     <ul>
                       <li>AP Computer Science</li>

@@ -1,15 +1,14 @@
 .coursework {
   width: 80%;
-  max-width: 1000px;
-  margin: 40px auto 0px auto;
+  max-width: 800px;
+  /* max-width: 1000px */
+  margin: 20px auto 0px auto;
   padding-bottom: 40px;
 }
 .coursework .container {
-  margin: 20px;
+  margin: 0px 20px 20px 20px;
 }
 .coursework .container .content {
-  width: 70%;
-  max-width: 800px;
   padding: 5px 0px 5px 0px;
   margin: auto;
 }
@@ -21,7 +20,7 @@
   background-color: rgb(189, 189, 189);
   border-radius: 25px;
   padding: 5px;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 .coursework .container .content .schools h2 {
