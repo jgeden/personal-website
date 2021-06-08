@@ -16,18 +16,18 @@ const ProjectsPage = () => {
       <div className="projects">
         <div className="content">
           <ul>
-            {/* <li className="project">
-              <h3>NERSC Custom Entrypoint Service
-                <a href="https://github.com/Josh0823" target="_blank" rel="noreferrer">
+            <li className="project">
+              <h3>JupyterHub Custom Entrypoint Service
+                <a href="https://github.com/Josh0823/entrypoint-service" target="_blank" rel="noreferrer">
                   <img className="img_link" src={github} alt="github logo" />
                 </a>
               </h3>
               <ul>
-                <li>Entrypoint Service</li>
+                <li>Coming soon...</li>
                 <br />
-                <li><b>Technologies:</b> Python, Tornado, Docker, Conda, JupyterHub</li>
+                <li><b>Technologies:</b> Python, Tornado, Jinja, Javascript, RESTful API, Docker, JupyterHub</li>
               </ul>
-            </li> */}
+            </li>
             <li className="project">
               <h3>NERSC Dask Launcher Widget
                 <a href="https://github.com/Josh0823/nersc-dask-launcher" target="_blank" rel="noreferrer">
@@ -35,7 +35,9 @@ const ProjectsPage = () => {
                 </a>
               </h3>
               <ul>
-                <li>Not every scientist at Berkeley Lab is a command line wizard, so I developed a frontend Jupyter widget for launching Dask distributed computing clusters on NERSC's Cori supercomputer without the need for using the terminal. Users can instead specify their launch arguments in a simple form widget that then automatically handles the resource allocation on Cori and the configuration of the Dask client.</li>
+                <li>Coming soon...</li>
+                <br />
+                {/* <li>Not every scientist at Berkeley Lab is a command line wizard, so I developed a frontend Jupyter widget for launching Dask distributed computing clusters on NERSC's Cori supercomputer without the need for using the terminal. Users can instead specify their launch arguments in a simple form widget that then automatically handles the resource allocation on Cori and the configuration of the Dask client.</li> */}
                 <li><b>Technologies:</b> Python, Dask, Bash, JupyterLab</li>
               </ul>
             </li>
