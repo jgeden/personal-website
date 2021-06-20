@@ -3,16 +3,18 @@ import ReactFullpage from '@fullpage/react-fullpage';
 
 import '../styles/style.css'
 
+const isBrowser = () => typeof window !== "undefined"
+
 const Body = () => (
   <ReactFullpage
     //fullpage options
     licenseKey={'YOUR_KEY_HERE'}
     scrollingSpeed={1000}
     autoScrolling={true}
-    navigation={window.innerWidth > 800}
+    navigation={isBrowser() && window.innerWidth > 800}
     anchors={['section1', 'section2', 'section3', 'section4']}
     navigationTooltips={['Home', 'About', 'Project', 'Contact']}
-    showActiveTooltip={window.innerWidth > 900}
+    showActiveTooltip={isBrowser() && window.innerWidth > 900}
     controlArrows={false}
     continuousVertical={true}
     slidesNavigation={true}
