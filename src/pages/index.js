@@ -7,22 +7,22 @@ const Body = () => (
   <ReactFullpage
     //fullpage options
     licenseKey={'YOUR_KEY_HERE'}
-    scrollingSpeed={1000} /* Options here */
+    scrollingSpeed={1000}
     autoScrolling={true}
-    navigation={true}
+    navigation={window.innerWidth > 800}
     anchors={['section1', 'section2', 'section3', 'section4']}
     navigationTooltips={['Home', 'About', 'Project', 'Contact']}
-    // showActiveTooltip={window.innerWidth > 960}
-    showActiveTooltip={true}
+    showActiveTooltip={window.innerWidth > 900}
     controlArrows={false}
     continuousVertical={true}
+    slidesNavigation={true}
 
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
           <div className="section" id="s1">
             <div className="content center">
-              <h1 style={{width: 'fit-content', margin: 'auto'}}>
+              <h1 style={{ width: 'fit-content', margin: 'auto' }}>
                 <span className="emoji" role="img" aria-label="smile emoji">😄</span> Hey, I'm Josh.
               </h1>
             </div>
@@ -46,19 +46,63 @@ const Body = () => (
                 <h2>NERSC Dask Launcher</h2>
                 <p>Not every scientist at Berkeley Lab is a command line wizard, so I developed a frontend Jupyter widget for launching Dask distributed computing clusters on NERSC's Cori supercomputer without the need for using the terminal. Users can instead specify their launch arguments in a simple form widget that then automatically handles the resource allocation on Cori and the configuration of the Dask client.</p>
                 <p><b>Technologies: </b>Python, Dask, Bash, JupyterLab</p>
-                <div style={{display: 'inline-block'}}>
-                <a style={{float: 'left'}} href="">Prev</a>
-                <a style={{float: 'right'}} href="#section3/1">Next</a>
-                </div>
               </div>
             </div>
             <div className="slide">
               <div className="content">
                 <h1 className="center">Projects</h1>
-                <p>slide 2</p>
-                <a href="#section3/0">Prev</a>
-                <a href="">Next</a>
+                <h2>JupyterLab Announcements Extension</h2>
+                <p>Some scientists at Berkeley live inside their JupyterLab notebooks, and very rarely check the hub for announcements. To make sure these scientists don't miss out on important announcements such as planned maintenance or ongoing issues, I developed a frontend JupyterLab extension that shows an announcements button in the status bar. No more confusion or lost work when the notebook suddenly goes down because of server maintenance!</p>
+                <p><b>Technologies: </b>Typescript, Selenium, CI/CD with GitHub Actions, JupyterLab</p>
               </div>
+            </div>
+            <div className="slide">
+              <div className="content">
+                <h1 className="center">Projects</h1>
+                <h2>JupyterLab Additional Resources Menu</h2>
+                <p>Like most users, the scientists at Berkeley Lab very rarely consult the documentation before they run into issues. To help with this issue, I built a frontend extension for JupyterLab that adds an Additional Resources menu to the default Help Menu. This menu has links to documentation that can be set system-wide by an admin. Maybe by including links to the documentation inside of JupyterLab itself, the users will be more likely to read it... maybe.</p>
+                <p><b>Technologies: </b>Typescript, Selenium, CI/CD with GitHub Actions, JupyterLab</p>
+              </div>
+            </div>
+            <div className="slide">
+              <div className="content">
+                <h1 className="center">Projects</h1>
+                <h2>This website!</h2>
+                <p>All the cool kids have their own personal website, and I wanted one too. I originally built this website with simple HTML & CSS and deployed with Flask and Heroku, but I transitioned to use React with Gatsby.js to improve rendering speed and improve organization. I've been making numerous updates since then. This is the third version, and it uses fullPage.js to create a single page website with auto-scrolling.</p>
+                <p><b>Technologies: </b>React, Gatsby.js, HTML, CSS</p>
+              </div>  
+            </div>
+            <div className="slide">
+              <div className="content">
+                <h1 className="center">Projects</h1>
+                <h2>"Raining Cats and Dogs" Full Stack Web App</h2>
+                <p>Duke has a lot of cute animals around campus, such as Peaches the cat and Nugget the golden retriever. I've been off campus since COVID first hit the US and I've missed seeing these pets around campus. So for my final project for CS290, Web Application Development, I created a full-stack location-based image sharing web app with a CRUD database where people can upload sightings of Nugget, Peaches, or any other Duke campus pet.</p>
+                <p><b>Technologies: </b>Vue, Express, Google Firebase, Google OAuth, HTML, CSS</p>
+              </div>  
+            </div>
+            <div className="slide">
+              <div className="content">
+                <h1 className="center">Projects</h1>
+                <h2>RISC Processor</h2>
+                <p>For my first (and so far only) electrical & computer engineering course at Duke, I created a 16-bit MIPS-like, word-addressed reduced instruction set computer (RISC) architecture. What a mouthful. I designed and implemented all of the necessary circuit components with Logism and tested my implementation with MIPS-like assembly code. It was a fun project, and I learned a lot about computer engineering, but this project also made me realize just how much more I prefer to do software. Sorry Professor Lebeck.</p>
+                <p><b>Technologies: </b>Digital Circuits, Assembly Language Programming, Logism</p>
+              </div>  
+            </div>
+            <div className="slide">
+              <div className="content">
+                <h1 className="center">Projects</h1>
+                <h2>FIRST Robotics OnBot Java Control System</h2>
+                <p>As the team captain and software captain for my school's robotics team, I was in charge of implementing our robot's control system with FIRST's OnBot Java library. I developed a remote-controlled program that allowed my team to control the robot wirelessly through a gamepad and included controls for the drive train, arm control, and our collection mechanism. I also developed an autonomous program that used sensors to guide the robot during the autonomous portion of the competition.</p>
+                <p><b>Technologies: </b>OnBot Java Library, Java</p>
+              </div>  
+            </div>
+            <div className="slide">
+              <div className="content">
+                <h1 className="center">Projects</h1>
+                <h2>SimplyFrank Simulated Compiler and Assembler</h2>
+                <p>SimplyFrank holds a special place in my heart as the first "big" CS project I ever wrote. A partner and I spent a month and a half designing and implementing our own programming language called SimplyFrank. Our teacher gave us documentation on a simulated assembly language called SML (Simple Machine Language) that our code had to compile to. We wrote an assembler program that was able to execute SML code through C++ and then we wrote a compiler program that took our SimplyFrank code and turned it into SML code.</p>
+                <p><b>Technologies: </b>C++, Assembly Language Programming, Stacks, Queues, Maps</p>
+              </div>  
             </div>
           </div>
 

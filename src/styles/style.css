@@ -19,12 +19,23 @@ p {
     margin: 0px 0px 8px 0px;
 }
 
+@media only screen and (max-width: 800px) {
+    p {
+        font-size: 16px;
+    }
+}
+
 a {
     color: rgb(31, 131, 145);
 }
 
 .center {
     text-align: center;
+}
+
+.fp-slidesNav {
+    text-align: center;
+    padding-bottom: 28px;
 }
 
 /* colors: ee8080 (pink), f0c95f (orange), 43c59e (green),  6cbde0 (blue) */
@@ -54,7 +65,11 @@ a {
 }
 
 span {
-    background: #fff !important;
+    background: #000 !important;
+}
+
+.fp-tooltip {
+    color:rgb(0, 0, 0) !important;
 }
 
 .content {
