@@ -96,7 +96,7 @@ const Body = () => (
               <div className="content">
                 <h1 className="center">Projects</h1>
                 <h2>FIRST Robotics OnBot Java Control System</h2>
-                <p>As the team captain and software captain for my school's robotics team, I was in charge of implementing our robot's control system with FIRST's OnBot Java library. I developed a remote-controlled program that allowed my team to control the robot wirelessly through a gamepad and included controls for the drive train, arm control, and our collection mechanism. I also developed an autonomous program that used sensors to guide the robot during the autonomous portion of the competition.</p>
+                <p>As the team captain and software captain for my school's robotics team, I was in charge of implementing our robot's control system for FIRST's Robotics Competition. I developed a wireless gamepad control system and included controls for the drive train, arm control, and collection mechanism. I also developed an autonomous program that used sensors to guide the robot during the autonomous portion of the competition.</p>
                 <p><b>Technologies: </b>OnBot Java Library, Java</p>
               </div>
             </div>
@@ -104,7 +104,7 @@ const Body = () => (
               <div className="content">
                 <h1 className="center">Projects</h1>
                 <h2>SimplyFrank Simulated Compiler and Assembler</h2>
-                <p>SimplyFrank holds a special place in my heart as the first "big" CS project I ever wrote. A partner and I spent a month and a half designing and implementing our own programming language called SimplyFrank that compiles to a simulated assembly language called SML (Simple Machine Language). We wrote an assembler program that was able to execute SML code through C++ and then we wrote a compiler program that took our SimplyFrank code and turned it into SML code.</p>
+                <p>SimplyFrank holds a special place in my heart my first "big" CS project. A partner and I spent a month and a half designing and implementing our own programming language called SimplyFrank that compiles to a simulated assembly language called SML (Simple Machine Language). We wrote an assembler program that was able to execute SML code through C++ and then we wrote a compiler program that took our SimplyFrank code and turned it into SML code.</p>
                 <p><b>Technologies: </b>C++, Assembly Language Programming, Stacks, Queues, Maps</p>
               </div>
             </div>
