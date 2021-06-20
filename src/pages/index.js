@@ -21,9 +21,6 @@ const Body = () => (
     onLeave={(origin, destination, direction) => {
       document.title = anchors[destination.index] + ' | Josh Geden'
     }}
-    afterResize={(width, height) => {
-      window.location.reload()
-    }}
 
     render={({ state, fullpageApi }) => {
       return (
