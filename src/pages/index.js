@@ -4,22 +4,26 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import resume from '../files/Joshua_Geden_Resume.pdf'
 import '../styles/style.css'
 
-
+const anchors = ['Home', 'About', 'Projects', 'Contact']
 const isBrowser = () => typeof window !== "undefined"
 
 const Body = () => (
   <ReactFullpage
-    //fullpage options
-    licenseKey={'YOUR_KEY_HERE'}
     scrollingSpeed={1000}
     autoScrolling={true}
     navigation={isBrowser() && window.innerWidth > 800}
-    anchors={['section1', 'section2', 'section3', 'section4']}
-    navigationTooltips={['Home', 'About', 'Projects', 'Contact']}
+    anchors={anchors}
+    navigationTooltips={anchors}
     showActiveTooltip={isBrowser() && window.innerWidth > 900}
     controlArrows={false}
     continuousVertical={true}
     slidesNavigation={true}
+    onLeave={(origin, destination, direction) => {
+      document.title = anchors[destination.index] + ' | Josh Geden'
+    }}
+    afterResize={(width, height) => {
+      window.location.reload()
+    }}
 
     render={({ state, fullpageApi }) => {
       return (
@@ -114,7 +118,7 @@ const Body = () => (
           <div className="section" id="s4">
             <div className="content">
               <h1 className="center">Contact</h1>
-              <p>The best way to contact me is to email me at <a style={{textDecoration: 'underline'}}>joshua.geden(at)duke.edu</a> or to message me on LinkedIn.</p>
+              <p>The best way to contact me is to email me at <a style={{ textDecoration: 'underline' }}>joshua.geden(at)duke.edu</a> or to message me on LinkedIn.</p>
             </div>
           </div>
         </ReactFullpage.Wrapper>
@@ -135,10 +139,11 @@ const Footer = () => {
 
 const IndexPage = () => {
   return (
-        <div>
-          {Body()}
-          {Footer()}
-        </div>
+    <div>
+      <title>Home | Josh Geden</title>
+      {Body()}
+      {Footer()}
+    </div>
   )
 }
 
