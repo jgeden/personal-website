@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 
+import resume from '../files/Joshua_Geden_Resume.pdf'
 import '../styles/style.css'
+
 
 const isBrowser = () => typeof window !== "undefined"
 
@@ -72,7 +74,7 @@ const Body = () => (
                 <h2>This website!</h2>
                 <p>All the cool kids have their own personal website, and I wanted one too. I originally built this website with simple HTML & CSS and deployed with Flask and Heroku, but I transitioned to use React with Gatsby.js to improve rendering speed and improve organization. I've been making numerous updates since then. This is the third version, and it uses fullPage.js to create a single page website with auto-scrolling.</p>
                 <p><b>Technologies: </b>React, Gatsby.js, HTML, CSS</p>
-              </div>  
+              </div>
             </div>
             <div className="slide">
               <div className="content">
@@ -80,7 +82,7 @@ const Body = () => (
                 <h2>"Raining Cats and Dogs" Full Stack Web App</h2>
                 <p>Duke has a lot of cute animals around campus, such as Peaches the cat and Nugget the golden retriever. I've been off campus since COVID first hit the US and I've missed seeing these pets around campus. So for my final project for CS290, Web Application Development, I created a full-stack location-based image sharing web app with a CRUD database where people can upload sightings of Nugget, Peaches, or any other Duke campus pet.</p>
                 <p><b>Technologies: </b>Vue, Express, Google Firebase, Google OAuth, HTML, CSS</p>
-              </div>  
+              </div>
             </div>
             <div className="slide">
               <div className="content">
@@ -88,7 +90,7 @@ const Body = () => (
                 <h2>RISC Processor</h2>
                 <p>For my first (and so far only) electrical & computer engineering course at Duke, I created a 16-bit MIPS-like, word-addressed reduced instruction set computer (RISC) architecture. What a mouthful. I designed and implemented all of the necessary circuit components with Logism and tested my implementation with MIPS-like assembly code. It was a fun project, and I learned a lot about computer engineering, but this project also made me realize just how much more I prefer to do software. Sorry Professor Lebeck.</p>
                 <p><b>Technologies: </b>Digital Circuits, Assembly Language Programming, Logism</p>
-              </div>  
+              </div>
             </div>
             <div className="slide">
               <div className="content">
@@ -96,15 +98,15 @@ const Body = () => (
                 <h2>FIRST Robotics OnBot Java Control System</h2>
                 <p>As the team captain and software captain for my school's robotics team, I was in charge of implementing our robot's control system with FIRST's OnBot Java library. I developed a remote-controlled program that allowed my team to control the robot wirelessly through a gamepad and included controls for the drive train, arm control, and our collection mechanism. I also developed an autonomous program that used sensors to guide the robot during the autonomous portion of the competition.</p>
                 <p><b>Technologies: </b>OnBot Java Library, Java</p>
-              </div>  
+              </div>
             </div>
             <div className="slide">
               <div className="content">
                 <h1 className="center">Projects</h1>
                 <h2>SimplyFrank Simulated Compiler and Assembler</h2>
-                <p>SimplyFrank holds a special place in my heart as the first "big" CS project I ever wrote. A partner and I spent a month and a half designing and implementing our own programming language called SimplyFrank. Our teacher gave us documentation on a simulated assembly language called SML (Simple Machine Language) that our code had to compile to. We wrote an assembler program that was able to execute SML code through C++ and then we wrote a compiler program that took our SimplyFrank code and turned it into SML code.</p>
+                <p>SimplyFrank holds a special place in my heart as the first "big" CS project I ever wrote. A partner and I spent a month and a half designing and implementing our own programming language called SimplyFrank that compiles to a simulated assembly language called SML (Simple Machine Language). We wrote an assembler program that was able to execute SML code through C++ and then we wrote a compiler program that took our SimplyFrank code and turned it into SML code.</p>
                 <p><b>Technologies: </b>C++, Assembly Language Programming, Stacks, Queues, Maps</p>
-              </div>  
+              </div>
             </div>
           </div>
 
@@ -121,17 +123,22 @@ const Body = () => (
   />
 );
 
+const Footer = () => {
+  return (
+    <div id="footer">
+      <a href={resume} target="_blank" rel="noreferrer">Resume</a>
+      <a href="https://linkedin.com/in/joshua-geden" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://github.com/Josh0823" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  )
+}
+
 const IndexPage = () => {
   return (
-    <div>
-      {Body()}
-      {/* Footer */}
-      <div id="footer">
-        <a href="assets/Joshua_Geden_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-        <a href="https://linkedin.com/in/joshua-geden" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://github.com/Josh0823" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-    </div>
+        <div>
+          {Body()}
+          {Footer()}
+        </div>
   )
 }
 
