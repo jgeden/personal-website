@@ -15,7 +15,7 @@ const Body = () => (
     autoScrolling={true}
     navigation={isBrowser() && window.innerWidth > 800}
     anchors={['section1', 'section2', 'section3', 'section4']}
-    navigationTooltips={['Home', 'About', 'Project', 'Contact']}
+    navigationTooltips={['Home', 'About', 'Projects', 'Contact']}
     showActiveTooltip={isBrowser() && window.innerWidth > 900}
     controlArrows={false}
     continuousVertical={true}
@@ -47,7 +47,7 @@ const Body = () => (
             <div className="slide">
               <div className="content">
                 <h1 className="center">Projects</h1>
-                <h2>NERSC Dask Launcher</h2>
+                <h2>NERSC Dask Launcher Widget</h2>
                 <p>Not every scientist at Berkeley Lab is a command line wizard, so I developed a frontend Jupyter widget for launching Dask distributed computing clusters on NERSC's Cori supercomputer without the need for using the terminal. Users can instead specify their launch arguments in a simple form widget that then automatically handles the resource allocation on Cori and the configuration of the Dask client.</p>
                 <p><b>Technologies: </b>Python, Dask, Bash, JupyterLab</p>
               </div>
@@ -56,7 +56,7 @@ const Body = () => (
               <div className="content">
                 <h1 className="center">Projects</h1>
                 <h2>JupyterLab Announcements Extension</h2>
-                <p>Some scientists at Berkeley live inside their JupyterLab notebooks, and very rarely check the hub for announcements. To make sure these scientists don't miss out on important announcements such as planned maintenance or ongoing issues, I developed a frontend JupyterLab extension that shows an announcements button in the status bar. No more confusion or lost work when the notebook suddenly goes down because of server maintenance!</p>
+                <p>Some scientists at Berkeley live inside their JupyterLab notebooks, and very rarely check the hub for announcements. To make sure these scientists don't miss out on important news such as planned maintenance or ongoing issues, I developed a frontend JupyterLab extension that shows an announcements button in the status bar. No more confusion or lost work when the notebook suddenly goes down because of server maintenance!</p>
                 <p><b>Technologies: </b>Typescript, Selenium, CI/CD with GitHub Actions, JupyterLab</p>
               </div>
             </div>
@@ -64,7 +64,7 @@ const Body = () => (
               <div className="content">
                 <h1 className="center">Projects</h1>
                 <h2>JupyterLab Additional Resources Menu</h2>
-                <p>Like most users, the scientists at Berkeley Lab very rarely consult the documentation before they run into issues. To help with this issue, I built a frontend extension for JupyterLab that adds an Additional Resources menu to the default Help Menu. This menu has links to documentation that can be set system-wide by an admin. Maybe by including links to the documentation inside of JupyterLab itself, the users will be more likely to read it... maybe.</p>
+                <p>Like most users, the scientists at Berkeley Lab very rarely consult the documentation before they run into issues. To help with this, I built a frontend extension for JupyterLab that adds an Additional Resources menu to the default Help Menu. This menu has links to documentation that can be set system-wide by an admin. Maybe by including links to the documentation inside of JupyterLab itself, the users will be more likely to read it... maybe.</p>
                 <p><b>Technologies: </b>Typescript, Selenium, CI/CD with GitHub Actions, JupyterLab</p>
               </div>
             </div>
@@ -104,7 +104,7 @@ const Body = () => (
               <div className="content">
                 <h1 className="center">Projects</h1>
                 <h2>SimplyFrank Simulated Compiler and Assembler</h2>
-                <p>SimplyFrank holds a special place in my heart my first "big" CS project. A partner and I spent a month and a half designing and implementing our own programming language called SimplyFrank that compiles to a simulated assembly language called SML (Simple Machine Language). We wrote an assembler program that was able to execute SML code through C++ and then we wrote a compiler program that took our SimplyFrank code and turned it into SML code.</p>
+                <p>SimplyFrank holds a special place in my heart as my first "big" CS project. A partner and I spent a month and a half designing and implementing our own programming language called SimplyFrank that compiles to a simulated assembly language called SML (Simple Machine Language). We wrote an assembler program that was able to execute SML code through C++ and then we wrote a compiler program that took our SimplyFrank code and turned it into SML code.</p>
                 <p><b>Technologies: </b>C++, Assembly Language Programming, Stacks, Queues, Maps</p>
               </div>
             </div>
@@ -114,7 +114,7 @@ const Body = () => (
           <div className="section" id="s4">
             <div className="content">
               <h1 className="center">Contact</h1>
-              <p>The best way to contact me is to email me at <a href="mailto:joshua.geden@duke.edu">joshua.geden@duke.edu</a> or to message me on LinkedIn.</p>
+              <p>The best way to contact me is to email me at <a style={{textDecoration: 'underline'}}>joshua.geden(at)duke.edu</a> or to message me on LinkedIn.</p>
             </div>
           </div>
         </ReactFullpage.Wrapper>
