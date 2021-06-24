@@ -49,6 +49,10 @@ a {
 
 /* colors: ee8080 (pink), f0c95f (orange), 43c59e (green),  6cbde0 (blue) */
 
+.section {
+    -webkit-transform: translate3d(0,0,0) !important;
+}
+
 #s1 {
     background: -webkit-gradient(linear, top left, bottom left, from(var(--color1)), to(var(--color2)));
     background: -webkit-linear-gradient(var(--color1), var(--color2));
