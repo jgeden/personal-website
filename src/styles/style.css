@@ -1,7 +1,7 @@
 :root {
-    --color1: #89d4f5;
-    --color2: #fd9f9f;
-    --color3: #f0b65f;
+    --color1: #6db1f0;
+    --color2: #ec7171;
+    --color3: #fab44c;
     --color4: #e7f06d;
 }
 
@@ -14,6 +14,10 @@ body {
 }
 
 h2 {
+    margin: 0px 0px 8px 0px;
+}
+
+h4 {
     margin: 0px 0px 8px 0px;
 }
 
@@ -47,7 +51,13 @@ a {
     padding-bottom: 28px;
 }
 
-/* colors: ee8080 (pink), f0c95f (orange), 43c59e (green),  6cbde0 (blue) */
+.section {
+    -webkit-transform: translate3d(0,0,0) !important;
+}
+
+.slide {
+    -webkit-transform: translate3d(0,0,0) !important;
+}
 
 #s1 {
     background: -webkit-gradient(linear, top left, bottom left, from(var(--color1)), to(var(--color2)));
@@ -85,6 +95,7 @@ span {
     background-color: rgba(255, 255, 255, 0.5) !important;
     padding: 15px;
     border-radius: 25px;
+    width: 800px;
     max-width: 800px;
     margin: auto;
     width: fit-content;
@@ -92,6 +103,7 @@ span {
 
 @media only screen and (max-width: 1000px) {
     .content {
+        width: 75%;
         max-width: 75%;
     }
 }

@@ -1,21 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactFullpage from '@fullpage/react-fullpage'
 
 import resume from '../files/Joshua_Geden_Resume.pdf'
 import github from '../images/github_logo.png'
 import '../styles/style.css'
 
-const anchors = ['Home', 'About', 'Projects', 'Contact']
+const anchors = ['Home', 'About', 'Experience', 'Projects', 'Contact']
 const isBrowser = () => typeof window !== "undefined"
 
 const Body = () => (
   <ReactFullpage
     scrollingSpeed={1000}
     autoScrolling={true}
-    navigation={isBrowser() && window.innerWidth > 800}
+    navigation={isBrowser() && window.innerWidth > 700}
     anchors={anchors}
     navigationTooltips={anchors}
-    showActiveTooltip={isBrowser() && window.innerWidth > 900}
+    showActiveTooltip={isBrowser() && window.innerWidth > 960}
     controlArrows={false}
     continuousVertical={true}
     slidesNavigation={true}
@@ -28,7 +28,7 @@ const Body = () => (
         <ReactFullpage.Wrapper>
           {/* Home Page */}
           <div className="section" id="s1">
-            <div className="content center">
+            <div className="content center" style={{ width: 'fit-content' }}>
               <h1 style={{ width: 'fit-content', margin: 'auto' }}>
                 <span className="emoji" role="img" aria-label="smile emoji">😄</span> Hey, I'm Josh.
               </h1>
@@ -161,13 +161,28 @@ const Footer = () => {
 }
 
 const IndexPage = () => {
-  return (
-    <div>
-      <title>Home | Josh Geden</title>
-      {Body()}
-      {Footer()}
-    </div>
-  )
+  const [loading, setLoading] = useState(true);
+
+  setTimeout(() => {
+    setLoading(false);
+  }, 50)
+
+
+  if (loading) {
+    return (
+      <div>
+        <title>Home | Josh Geden</title>
+      </div>
+    )
+  } else {
+    return (
+      <div>
+        <title>Home | Josh Geden</title>
+        {Body()}
+        {Footer()}
+      </div>
+    )
+  }
 }
 
 export default IndexPage
