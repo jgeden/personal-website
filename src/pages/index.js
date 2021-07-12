@@ -170,17 +170,23 @@ const IndexPage = () => {
 
   if (loading) {
     return (
-      <div>
-        <title>Home | Josh Geden</title>
-      </div>
+      <html>
+        <head>
+          <title>Home | Josh Geden</title>
+          <meta name="google-site-verification" content="FVNF30Geh1EwX5ZRqP6wtVWB5gthPGmkCIvAwGmvuLo" />
+        </head>
+      </html>
     )
   } else {
     return (
-      <div>
-        <title>Home | Josh Geden</title>
+      <html>
+        <head>
+          <title>Home | Josh Geden</title>
+          <meta name="google-site-verification" content="FVNF30Geh1EwX5ZRqP6wtVWB5gthPGmkCIvAwGmvuLo" />
+        </head>
         {Body()}
         {Footer()}
-      </div>
+      </html>
     )
   }
 }
