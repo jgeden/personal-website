@@ -173,7 +173,6 @@ const IndexPage = () => {
       <html>
         <head>
           <title>Home | Josh Geden</title>
-          <meta name="google-site-verification" content="FVNF30Geh1EwX5ZRqP6wtVWB5gthPGmkCIvAwGmvuLo" />
         </head>
       </html>
     )
@@ -182,7 +181,6 @@ const IndexPage = () => {
       <html>
         <head>
           <title>Home | Josh Geden</title>
-          <meta name="google-site-verification" content="FVNF30Geh1EwX5ZRqP6wtVWB5gthPGmkCIvAwGmvuLo" />
         </head>
         {Body()}
         {Footer()}
