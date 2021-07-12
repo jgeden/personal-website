@@ -5,7 +5,7 @@ import resume from '../files/Joshua_Geden_Resume.pdf'
 import github from '../images/github_logo.png'
 import '../styles/style.css'
 
-const anchors = ['Home', 'About', 'Experience', 'Projects', 'Contact']
+const anchors = ['Home', 'About', 'Projects', 'Contact']
 const isBrowser = () => typeof window !== "undefined"
 
 const Body = () => (
