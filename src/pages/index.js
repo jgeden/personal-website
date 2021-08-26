@@ -39,26 +39,14 @@ const Body = () => (
           <div className="section" id="s2">
             <div className="content">
               <h1 className="center">About Me</h1>
-              <p>I am a small-town kid, born and raised in South Carolina <span className="emoji" role="img" aria-label="SC emojis">🌙🌴</span> and am now living in Berlin <span className="emoji" role="img" aria-label="Berlin emojis">🧸🇩🇪</span>. I am currently a junior at Duke, where I am studying Computer Science, Linguistics, & German. Go Blue Devils <span className="emoji" role="img" aria-label="blue devil emojis">🔵😈</span>!</p>
+              <p>I am currently living in Berlin <span className="emoji" role="img" aria-label="Berlin emojis">🧸🇩🇪</span>, but at heart I'm a small-town kid, and was born and raised in South Carolina <span className="emoji" role="img" aria-label="SC emojis">🌙🌴</span>. I am currently a junior at Duke University, where I am studying Computer Science, Linguistics, & German. Go Blue Devils <span className="emoji" role="img" aria-label="blue devil emojis">🔵😈</span>!</p>
               <p>I am passionate about the use of tech for social good. My specific interests include using tech to expand access to quality education and to overcome linguistic barriers.</p>
-              <p>I was previously a software engineer intern at <a href="https://www.lbl.gov" target="_blank" rel="noreferrer">Lawrence Berkeley National Lab</a> <span className="emoji" role="img" aria-label="national lab emojis">🌇🇺🇸🧪</span>. My work focused on developing software to make the supercomputers at Berkeley more accessible and user friendly through Jupyter. In the spring I will be joining <a href="https://www.mealme.ai" target="_blank" rel="noreferrer">MealMe</a> as a software engineering intern.</p>
+              <p>I was previously a software engineering intern at <a href="https://www.lbl.gov" target="_blank" rel="noreferrer">Lawrence Berkeley National Lab</a> <span className="emoji" role="img" aria-label="national lab emojis">🌇🇺🇸🧪</span>. My work focused on developing software to make the supercomputers at Berkeley more accessible and user friendly through Jupyter. In the spring I will be joining <a href="https://www.mealme.ai" target="_blank" rel="noreferrer">MealMe</a> as a software engineering intern.</p>
             </div>
           </div>
 
           {/* Projects */}
           <div className="section" id="s3">
-            {/* <div className="slide">
-              <div className="content">
-                <h1 className="center">Projects</h1>
-                <h2>NERSC Dask Launcher Widget
-                  <a href="https://github.com/Josh0823/nersc-dask-launcher" target="_blank" rel="noreferrer">
-                    <img className="img_link" src={github} alt="github logo" />
-                  </a>
-                </h2>
-                <p>Not every scientist at Berkeley Lab is a command line wizard, so I developed a frontend Jupyter widget for launching Dask distributed computing clusters on NERSC's Cori supercomputer without the need for using the terminal. Users can instead specify their launch arguments in a simple form widget that then automatically handles the resource allocation on Cori and the configuration of the Dask client.</p>
-                <p><b>Technologies: </b>Python, Dask, Bash, JupyterLab</p>
-              </div>
-            </div> */}
             <div className="slide">
               <div className="content">
                 <h1 className="center">Projects</h1>
@@ -165,28 +153,21 @@ const IndexPage = () => {
 
   setTimeout(() => {
     setLoading(false);
-  }, 25)
+  }, 5)
 
-
-  if (loading) {
-    return (
-      <html lang="en">
-        <head>
-          <title>Home | Josh Geden</title>
-        </head>
-      </html>
-    )
-  } else {
-    return (
-      <html lang="en">
-        <head>
-          <title>Home | Josh Geden</title>
-        </head>
-        {Body()}
-        {Footer()}
-      </html>
-    )
-  }
+  return (
+    <html lang="en">
+      <head>
+        <title>Home | Josh Geden</title>
+      </head>
+      {!loading &&
+        <div>
+          {Body()}
+          {Footer()}
+        </div>
+      }
+    </html>
+  )
 }
 
 export default IndexPage
