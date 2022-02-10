@@ -2,7 +2,7 @@
     --color1: #6db1f0;
     --color2: #ec7171;
     --color3: #fab44c;
-    --color4: #e7f06d;
+    --color4: #57f8e3;
 }
 
 body {
@@ -30,11 +30,27 @@ p {
     h1 {
         font-size: 24px;
     }
+
     h2 {
         font-size: 20px;
     }
+
     p {
         font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    h1 {
+        font-size: 21px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    p {
+        font-size: 13px;
     }
 }
 
@@ -52,11 +68,11 @@ a {
 }
 
 .section {
-    -webkit-transform: translate3d(0,0,0) !important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
 }
 
 .slide {
-    -webkit-transform: translate3d(0,0,0) !important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
 }
 
 #s1 {
