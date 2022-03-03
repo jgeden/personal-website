@@ -1,157 +1,188 @@
 :root {
-    --color1: #6db1f0;
-    --color2: #ec7171;
-    --color3: #fab44c;
-    --color4: #57f8e3;
+  --color1: #6db1f0;
+  --color2: #ec7171;
+  --color3: #fab44c;
+  --color4: #57f8e3;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(0, 0, 0);
-    background: -webkit-gradient(linear, top left, bottom left, from(var(--color1)), to(var(--color2)));
-    background: -webkit-linear-gradient(var(--color1), var(--color2));
-    background: linear-gradient(var(--color1), var(--color2));
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(0, 0, 0);
+  background: -webkit-gradient(
+    linear,
+    top left,
+    bottom left,
+    from(var(--color1)),
+    to(var(--color2))
+  );
+  background: -webkit-linear-gradient(var(--color1), var(--color2));
+  background: linear-gradient(var(--color1), var(--color2));
 }
 
 h2 {
-    margin: 0px 0px 8px 0px;
+  margin: 0px 0px 8px 0px;
 }
 
 h4 {
-    margin: 0px 0px 8px 0px;
+  margin: 0px 0px 8px 0px;
 }
 
 p {
-    font-size: 20px;
-    margin: 0px 0px 8px 0px;
+  font-size: 20px;
+  margin: 0px 0px 8px 0px;
 }
 
 @media only screen and (max-width: 800px) {
-    h1 {
-        font-size: 24px;
-    }
+  h1 {
+    font-size: 24px;
+  }
 
-    h2 {
-        font-size: 20px;
-    }
+  h2 {
+    font-size: 20px;
+  }
 
-    p {
-        font-size: 16px;
-    }
+  p {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 330px) {
-    h1 {
-        font-size: 21px;
-    }
+  h1 {
+    font-size: 21px;
+  }
 
-    h2 {
-        font-size: 17px;
-    }
+  h2 {
+    font-size: 17px;
+  }
 
-    p {
-        font-size: 13px;
-    }
+  p {
+    font-size: 13px;
+  }
 }
 
 a {
-    color: rgb(66, 66, 66);
+  color: rgb(66, 66, 66);
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .fp-slidesNav {
-    text-align: center;
-    padding-bottom: 28px;
+  text-align: center;
+  padding-bottom: 28px;
 }
 
 .section {
-    -webkit-transform: translate3d(0, 0, 0) !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
 }
 
 .slide {
-    -webkit-transform: translate3d(0, 0, 0) !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
 }
 
 #s1 {
-    background: -webkit-gradient(linear, top left, bottom left, from(var(--color1)), to(var(--color2)));
-    background: -webkit-linear-gradient(var(--color1), var(--color2));
-    background: linear-gradient(var(--color1), var(--color2));
+  background: -webkit-gradient(
+    linear,
+    top left,
+    bottom left,
+    from(var(--color1)),
+    to(var(--color2))
+  );
+  background: -webkit-linear-gradient(var(--color1), var(--color2));
+  background: linear-gradient(var(--color1), var(--color2));
 }
 
 #s2 {
-    background: -webkit-gradient(linear, top left, bottom left, from(var(--color2)), to(var(--color3)));
-    background: -webkit-linear-gradient(var(--color2), var(--color3));
-    background: linear-gradient(var(--color2), var(--color3));
+  background: -webkit-gradient(
+    linear,
+    top left,
+    bottom left,
+    from(var(--color2)),
+    to(var(--color3))
+  );
+  background: -webkit-linear-gradient(var(--color2), var(--color3));
+  background: linear-gradient(var(--color2), var(--color3));
 }
 
 #s3 {
-    background: -webkit-gradient(linear, top left, bottom left, from(var(--color3)), to(var(--color4)));
-    background: -webkit-linear-gradient(var(--color3), var(--color4));
-    background: linear-gradient(var(--color3), var(--color4));
+  background: -webkit-gradient(
+    linear,
+    top left,
+    bottom left,
+    from(var(--color3)),
+    to(var(--color4))
+  );
+  background: -webkit-linear-gradient(var(--color3), var(--color4));
+  background: linear-gradient(var(--color3), var(--color4));
 }
 
 #s4 {
-    background: -webkit-gradient(linear, top left, bottom left, from(var(--color4)), to(var(--color1)));
-    background: -webkit-linear-gradient(var(--color4), var(--color1));
-    background: linear-gradient(var(--color4), var(--color1));
+  background: -webkit-gradient(
+    linear,
+    top left,
+    bottom left,
+    from(var(--color4)),
+    to(var(--color1))
+  );
+  background: -webkit-linear-gradient(var(--color4), var(--color1));
+  background: linear-gradient(var(--color4), var(--color1));
 }
 
 span {
-    background: #000 !important;
+  background: #000 !important;
 }
 
 .fp-tooltip {
-    color: rgb(0, 0, 0) !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 .content {
-    background-color: rgba(255, 255, 255, 0.5) !important;
-    padding: 15px;
-    border-radius: 25px;
-    width: 800px;
-    max-width: 800px;
-    margin: auto;
-    width: fit-content;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  padding: 15px;
+  border-radius: 25px;
+  width: 800px;
+  max-width: 800px;
+  margin: auto;
+  width: fit-content;
 }
 
 @media only screen and (max-width: 1000px) {
-    .content {
-        width: 75%;
-        max-width: 75%;
-    }
+  .content {
+    width: 75%;
+    max-width: 75%;
+  }
 }
 
 .emoji {
-    background: none !important;
+  background: none !important;
 }
 
 .img_link {
-    width: 18px;
-    padding-top: 4px;
-    margin-left: 6px;
+  width: 18px;
+  padding-top: 4px;
+  margin-left: 6px;
 }
 
 #footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    color: #000;
-    background-color: rgba(255, 255, 255, 0.333);
-    width: 100%;
-    height: 24px;
-    text-align: right;
-    padding: 12px 0px 4px 0px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.333);
+  width: 100%;
+  height: 24px;
+  text-align: right;
+  padding: 12px 0px 4px 0px;
 }
 
 #footer a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #000;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #000;
 }
 
 #footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
