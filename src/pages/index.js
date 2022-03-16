@@ -1,181 +1,225 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 
+import { Helmet } from "react-helmet";
+import Icon from "@mdi/react";
+import {
+  mdiCellphone,
+  mdiDiscord,
+  mdiEmail,
+  mdiGithub,
+  mdiLinkedin,
+} from "@mdi/js";
+
+import Footer from "../components/Footer";
+import TitleBar from "../components/TitleBar";
+
 import resume from "../files/Joshua_Geden_Resume.pdf";
-import github from "../images/github_logo.png";
+import berekelyLogo from "../images/berkeley-logo.png";
+import mealmeLogo from "../images/mealme-logo.png";
+import nasaLogo from "../images/nasa-logo.png";
+import nerscLogo from "../images/nersc-logo.png";
 import "../styles/main.css";
 
-const anchors = ["Home", "About", "Projects", "Contact"];
+const anchors = ["home", "about", "projects", "resume"];
 const isBrowser = () => typeof window !== "undefined";
 
-const Emoji = (props) => {
-  return (
-    <span className="emoji" role="img" aria-label="emoji">
-      {props.emoji}
-    </span>
-  );
-};
+const Head = () => {
+  const currentHash = isBrowser() ? window.location.hash.substring(1) : "home";
 
-const Link = (props) => {
   return (
-    <a href={props.href} target="_blank" rel="noreferrer">
-      {props.children}
-    </a>
-  );
-};
-
-const Project = (props) => {
-  return (
-    <div className="slide">
-      <div className="content">
-        <h1 className="center">Projects</h1>
-        <h2>
-          {props.title}
-          {props.link && (
-            <a href={props.link} target="_blank" rel="noreferrer">
-              <img className="img_link" src={github} alt="github logo" />
-            </a>
-          )}
-        </h2>
-        <p>{props.description}</p>
-        <p>
-          <b>Technologies: </b>
-          {props.technologies}
-        </p>
-      </div>
-    </div>
+    <Helmet>
+      <link
+        href="https://fonts.googleapis.com/css?family=Roboto Mono"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Inter"
+        rel="stylesheet"
+      />
+      <title>&gt; joshgeden$ ./{currentHash}</title>
+    </Helmet>
   );
 };
 
 const Body = () => (
   <ReactFullpage
     scrollingSpeed={1000}
-    autoScrolling={true}
-    navigation={isBrowser() && window.innerWidth > 700}
     anchors={anchors}
-    navigationTooltips={anchors}
-    showActiveTooltip={isBrowser() && window.innerWidth > 960}
     controlArrows={false}
     continuousVertical={true}
     slidesNavigation={true}
     onLeave={(origin, destination, direction) => {
-      document.title = anchors[destination.index] + " | Josh Geden";
+      document.title = "> joshgeden$ ./" + anchors[destination.index];
     }}
     render={({ state, fullpageApi }) => {
+      if (fullpageApi) {
+        fullpageApi.setAllowScrolling(false);
+      }
+
       return (
         <ReactFullpage.Wrapper>
-          {/* Home Page */}
-          <div className="section" id="s1">
-            <div className="content center" style={{ width: "fit-content" }}>
-              <h1 style={{ width: "fit-content", margin: "auto" }}>
-                <Emoji emoji="😄" /> Hey, I'm Josh.
-              </h1>
-            </div>
-          </div>
-
-          {/* About Me */}
-          <div className="section" id="s2">
-            <div className="content">
-              <h1 className="center">About Me</h1>
-              <p>
-                I was born and raised in South Carolina <Emoji emoji="🌙🌴" />{" "}
-                and am now living in the Bay Area <Emoji emoji="🚉🌉" />. I am a
-                third-year undergraduate at Duke University, where I am studying
-                Computer Science, Linguistics, & German. Go Blue Devils{" "}
-                <Emoji emoji="🔵😈" />!
-              </p>
-              <p>
-                I am passionate about the use of tech for social good. I'm
-                particularly interested in working with open-source tools to
-                support scientific advancement.
-              </p>
-              <p>
-                I was previously a software engineer intern at the{" "}
-                <Link href="https://www.nersc.gov">
-                  National Energy Research Scientific Computing Center
-                </Link>{" "}
-                <Emoji emoji="⚡️🇺🇸🧪" /> and{" "}
-                <Link href="https://www.mealme.ai">MealMe</Link>{" "}
-                <Emoji emoji="🍴🍔" />. I am currently an intern at{" "}
-                <Link href="https://www.lbl.gov">Berkeley National Lab</Link>{" "}
-                working on the{" "}
-                <Link href="https://ameriflux.lbl.gov">AmeriFlux</Link> project,
-                an international network dedicated to compiling comprehensive
-                data on climate change.
-              </p>
-            </div>
-          </div>
-
-          {/* Projects */}
-          <div className="section" id="s3">
-            <Project
-              title="GroupDuke"
-              link="https://github.com/Josh0823/GroupDuke"
-              description="Currently building a full-stack web app to help Duke students find course GroupMe chats. Building the reactive frontend with SvelteKit and the backend with Fiber, an Express-inspired web framework for Go."
-              technologies="Svelte, Typescript, Go, Fiber, Firebase, Redis"
-            />
-            <Project
-              title="JupyterHub Entrypoint Service"
-              link="https://github.com/NERSC/jupyterhub-entrypoint"
-              description="Some technology stacks at Berkeley Lab are incredibly specific, and many groups use virtual environments or container images to ensure reproducibility across multiple systems and users. I created a prototype web application service that stores user settings and interfaces with JupyterHub. This allows users to launch Jupyter in any virtual environment or image on NERSC's Cori supercomputer. I presented my project at the Jupyter in HPC monthly meeting and at the CSSSP Poster Session."
-              technologies="Javascript, Python, REST API, Selenium, CI/CD with GitHub Actions, Jupyter"
-            />
-            <Project
-              title="JupyterLab Announcements Extension"
-              link="https://github.com/Josh0823/nersc-refresh-announcements"
-              description="Some scientists at Berkeley live inside their JupyterLab notebooks, and very rarely check the hub for announcements. To make sure these scientists don't miss out on important news such as planned maintenance or ongoing issues, I developed a frontend JupyterLab extension that shows an announcements button in the status bar. No more confusion or lost work when the notebook suddenly goes down because of server maintenance!"
-              technologies="Typescript, Selenium, CI/CD with GitHub Actions, JupyterLab"
-            />
-            <Project
-              title="JupyterLab Additional Resources Menu"
-              link="https://github.com/Josh0823/additional-resources-menu"
-              description="Like most users, the scientists at Berkeley Lab very rarely consult the documentation before they run into issues. To help with this, I built a frontend extension for JupyterLab that adds an Additional Resources menu to the default Help Menu. This menu has links to documentation that can be set system-wide by an admin. Maybe by including links to the documentation inside of JupyterLab itself, the users will be more likely to read it... maybe."
-              technologies="Typescript, Selenium, CI/CD with GitHub Actions, JupyterLab"
-            />
-            <Project
-              title="This website!"
-              link="https://github.com/Josh0823/personal-website"
-              description="All the cool kids have their own personal website, and I wanted one too. I originally built this website with simple HTML & CSS and deployed with Flask and Heroku, but I transitioned to use React with Gatsby.js to improve rendering speed and improve organization. I've been making numerous updates since then. This is the third version, and it uses fullPage.js to create a single page website with auto-scrolling."
-              technologies="React, Gatsby.js, HTML, CSS"
-            />
-            <Project
-              title='"Raining Cats and Dogs" Full Stack Web App'
-              link="https://compsci290_2021spring.dukecs.io/portfolio_jmg136/Final/index.html"
-              description="Duke has a lot of cute animals around campus, such as Peaches the cat and Nugget the golden retriever. I've been off campus since COVID first hit the US and I've missed seeing these pets around campus. So for my final project for CS290, Web Application Development, I created a full-stack location-based image sharing web app with a CRUD database where people can upload sightings of Nugget, Peaches, or any other Duke campus pet."
-              technologies="Vue, Express, Google Firebase, Google OAuth, HTML, CSS"
-            />
-            <Project
-              title="RISC Processor"
-              description="For my first (and so far only) electrical & computer engineering course at Duke, I created a 16-bit MIPS-like, word-addressed reduced instruction set computer (RISC) architecture. What a mouthful. I designed and implemented all of the necessary circuit components with Logism and tested my implementation with MIPS-like assembly code. It was a fun project, and I learned a lot about computer engineering, but this project also made me realize just how much more I prefer to do software. Sorry Professor Lebeck."
-              technologies="Digital Circuits, Assembly Language Programming, Logism"
-            />
-            <Project
-              title="FIRST Robotics OnBot Java Control System"
-              description="As the team captain and software captain for my school's robotics team, I was in charge of implementing our robot's control system for FIRST's Robotics Competition. I developed a wireless gamepad control system and included controls for the drive train, arm control, and collection mechanism. I also developed an autonomous program that used sensors to guide the robot during the autonomous portion of the competition."
-              technologies="OnBot Java Library, Java"
-            />
-            <Project
-              title="SimplyFrank Simulated Compiler and Assembler"
-              link="https://github.com/Josh0823/SimplyFrank"
-              description='SimplyFrank holds a special place in my heart as my first "big" CS project. A partner and I spent a month and a half designing and implementing our own programming language called SimplyFrank that compiles to a simulated assembly language called SML (Simple Machine Language). We wrote an assembler program that was able to execute SML code through C++ and then we wrote a compiler program that took our SimplyFrank code and turned it into SML code.'
-              technologies="C++, Assembly Language Programming, Stacks, Queues, Maps"
-            />
-          </div>
-
-          {/* Contact */}
-          <div className="section" id="s4">
-            <div className="content">
-              <h1 className="center">Contact</h1>
-              <p>
-                The best way to contact me is to email me at{" "}
+          {/* home section */}
+          <div className="section">
+            <div className="float-center">
+              <div className="name-box">
+                <h1>Hi, I'm Josh</h1>
+              </div>
+              <div>
+                <p>cs @ duke | swe @ nasa jpl</p>
+              </div>
+              <div className="icons-box">
+                <a href="tel:18643733991">
+                  <Icon
+                    path={mdiCellphone}
+                    className="icon"
+                    aria-label="Phone"
+                  />
+                </a>
+                <a href="mailto:joshgeden10@gmail.com">
+                  <Icon path={mdiEmail} className="icon" aria-label="email" />
+                </a>
                 <a
-                  href="mailto:joshua.geden@duke.edu"
-                  style={{ textDecoration: "underline" }}
+                  href="https://github.com/Josh0823"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  joshua.geden@duke.edu
-                </a>{" "}
-                or to message me on LinkedIn.
-              </p>
+                  <Icon path={mdiGithub} className="icon" aria-label="GitHub" />
+                </a>
+                <a
+                  href="https://linkedin.com/in/joshua-geden"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Icon
+                    path={mdiLinkedin}
+                    className="icon"
+                    aria-label="LinkedIn"
+                  />
+                </a>
+                <a
+                  href="https://discordapp.com/users/608489354847059989"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Icon
+                    path={mdiDiscord}
+                    className="icon"
+                    aria-label="Discrod"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* about section */}
+          <div className="section">
+            <div className="float-center">
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <div className="content">
+                  <ul>
+                    <li>
+                      <p>
+                        third-year undergraduate at duke university studying
+                        computer science and linguistics
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        software engineer intern at nersc, mealme, and berkeley
+                        national lab and now at nasa jpl
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        interested in open source, building scientific tools,
+                        and full-stack development
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div style={{ width: "fit-content", height: "fit-content" }}>
+                  <div className="row-col">
+                    <a
+                      href="https://www.nersc.gov/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={nerscLogo}
+                        aria-label="NERSC Logo"
+                        className="about-img"
+                      />
+                    </a>
+                    <a
+                      href="https://mealme.ai"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={mealmeLogo}
+                        aria-label="MealMe Logo"
+                        className="about-img"
+                      />
+                    </a>
+                  </div>
+                  <div className="row-col">
+                    <a
+                      href="https://www.lbl.gov/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={berekelyLogo}
+                        aria-label="Berkeley Lab Logo"
+                        className="about-img"
+                      />
+                    </a>
+                    <a
+                      href="https://europa.nasa.gov/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={nasaLogo}
+                        aria-label="NASA JPL Logo"
+                        className="about-img"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* projects section */}
+          <div className="section">
+            <div className="float-center">
+              <div className="center content">
+                <ul>
+                  <li>Europa Clipper Register Mapper</li>
+                  <li>GroupDuke</li>
+                  <li>JupyterHub Entrypoint</li>
+                  <li>SimplyFrank</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* resume section */}
+          <div className="section">
+            <div className="float-center">
+              <a href={resume} target="_blank" rel="noreferrer">
+                <p>View in new tab</p>
+              </a>
+              <iframe src={resume} title="Resume pdf viewer" />
             </div>
           </div>
         </ReactFullpage.Wrapper>
@@ -183,26 +227,6 @@ const Body = () => (
     }}
   />
 );
-
-const Footer = () => {
-  return (
-    <div id="footer">
-      <a href={resume} target="_blank" rel="noreferrer" id="resume">
-        Resume
-      </a>
-      <a
-        href="https://linkedin.com/in/joshua-geden"
-        target="_blank"
-        rel="noreferrer"
-      >
-        LinkedIn
-      </a>
-      <a href="https://github.com/Josh0823" target="_blank" rel="noreferrer">
-        GitHub
-      </a>
-    </div>
-  );
-};
 
 const IndexPage = () => {
   const [loading, setLoading] = useState(true);
@@ -212,17 +236,12 @@ const IndexPage = () => {
   }, 5);
 
   return (
-    <html lang="en">
-      <head>
-        <title>Home | Josh Geden</title>
-      </head>
-      {!loading && (
-        <div>
-          <Body />
-          <Footer />
-        </div>
-      )}
-    </html>
+    <>
+      <Head />
+      <TitleBar />
+      {!loading && <Body />}
+      <Footer />
+    </>
   );
 };
 
