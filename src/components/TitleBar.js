@@ -1,30 +1,24 @@
 import * as React from "react";
-import "./TitleBar.css";
 
 const isBrowser = () => typeof window !== "undefined";
 
 const TitleBar = () => {
   return (
-    <div className="title-bar">
-      <div className="title-bar-content">
-        <div className="logo">
+    <div className="bg-[#1b1c1d] w-full h-16 flex absolute z-10">
+      <div className="w-[90%] max-w-[780px] m-auto flex justify-between items-center">
+        <div className="flex items-center font-bold">
           <span>&gt;</span>
-          <a href="/#home" style={{marginLeft: "0.5rem"}}>
-            <span className="logo-text">joshgeden</span>
+          <a className="ml-2" href="/#home">
+            <span className="text-lg">joshgeden</span>
           </a>
-          <span className="logo-text">$</span>
-          <span className="logo-cursor"></span>
+          <span className="text-lg">$</span>
+          <span className="bg-[#be0048] rounded-sm h-5 w-[10px] ml-2 animate-blink"></span>
         </div>
-
-        <div style={{ height: "1.3em" }}>
-          {isBrowser() && window.innerWidth > 600 ? (
-            <>
-              <a href="#about">about</a>
-              <a href="#projects">projects</a>
-              <a href="#resume">resume</a>
-            </>
-          ) : (
-            <p>dropdown</p>
+        <div>
+          <a className="ml-4" href="#about">about</a>
+          <a className="ml-4" href="#projects">projects</a>
+          {isBrowser() && window.innerWidth > 500 && (
+            <a className="ml-4" href="#resume">resume</a>
           )}
         </div>
       </div>

@@ -1,26 +1,8 @@
-:root {
-  --c1: #ac90f7;
-  --c2: #e999c5;
-}
-
-html {
-  height: 100%;
-  overflow: hidden;
-}
-
 body {
-  background: -webkit-gradient(
-    linear,
-    top left,
-    bottom left,
-    from(var(--c1)),
-    to(var(--c2))
-  );
-  background: -webkit-linear-gradient(var(--c1), var(--c2));
-  background: linear-gradient(var(--c1), var(--c2));
+  background-color: white;
+  height: 100vh;
+}
 
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+a {
+  color: black;
 }

@@ -1,5 +1,6 @@
-import * as React from "react"
+import React from "react"
 import { Link } from "gatsby"
+import "../styles/404.css"
 
 // styles
 const pageStyles = {
@@ -45,7 +46,7 @@ const NotFoundPage = () => {
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Link to="/" style={{color: "purple"}}>Go home</Link>
       </p>
     </main>
   )

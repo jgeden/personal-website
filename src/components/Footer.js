@@ -1,10 +1,9 @@
 import * as React from "react";
-import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="footer-content">
+    <div className="w-full absolute top-[90%] flex justify-center">
+      <div className="m-auto">
         <p>&copy; 2022</p>
       </div>
     </div>
