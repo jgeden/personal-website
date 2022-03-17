@@ -265,14 +265,18 @@ const Body = () => (
 const IndexPage = () => {
   const [loading, setLoading] = useState(true);
 
-  setTimeout(() => setLoading(false), 100);
+  setTimeout(() => setLoading(false), 50);
 
   return (
     <>
-      <Head />
-      <TitleBar />
-      {!loading && <Body />}
-      <Footer />
+      {!loading && (
+        <>
+          <Head />
+          <TitleBar />
+          <Body />
+          <Footer />
+        </>
+      )}
     </>
   );
 };
