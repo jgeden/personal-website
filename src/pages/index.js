@@ -174,6 +174,7 @@ const Body = () => (
                   >
                     <img
                       src={nerscLogo}
+                      alt="NERSC Logo"
                       aria-label="NERSC Logo"
                       className="about-img"
                     />
@@ -181,6 +182,7 @@ const Body = () => (
                   <a href="https://mealme.ai" target="_blank" rel="noreferrer">
                     <img
                       src={mealmeLogo}
+                      alt="MealMe Logo"
                       aria-label="MealMe Logo"
                       className="about-img"
                     />
@@ -194,6 +196,7 @@ const Body = () => (
                   >
                     <img
                       src={berekelyLogo}
+                      alt="Berkeley Lab Logo"
                       aria-label="Berkeley Lab Logo"
                       className="about-img"
                     />
@@ -205,6 +208,7 @@ const Body = () => (
                   >
                     <img
                       src={nasaLogo}
+                      alt="Berkeley Lab Logo"
                       aria-label="NASA JPL Logo"
                       className="about-img"
                     />
@@ -250,6 +254,7 @@ const Body = () => (
                 </a>
                 <img
                   src={resumePNG}
+                  alt="Resume"
                   class="h-5/6 max-w-[800px]  m-auto"
                   title="resume"
                 />
@@ -265,7 +270,7 @@ const Body = () => (
 const IndexPage = () => {
   const [loading, setLoading] = useState(true);
 
-  setTimeout(() => setLoading(false), 50);
+  setTimeout(() => setLoading(false), 100);
 
   return (
     <>
